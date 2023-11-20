@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   # Hey check out this cool comment.
   get "/addresses" => "addresses#index"
+  get "/rooms" => "rooms#index"
 end
