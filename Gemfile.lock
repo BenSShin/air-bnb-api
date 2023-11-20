@@ -129,6 +129,8 @@ GEM
     nio4r (2.6.0)
     nokogiri (1.15.5-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.5-x86_64-darwin)
+      racc (~> 1.4)
     pg (1.5.4)
     psych (5.1.1.1)
       stringio
@@ -212,6 +214,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+<<<<<<< HEAD
+  x86_64-darwin-21
+=======
+  x86_64-darwin-22
+>>>>>>> e7fe80f9a3bbb374952069d0e31107195db701c5
 
 DEPENDENCIES
   bootsnap
