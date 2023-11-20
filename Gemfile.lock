@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    bcrypt (3.1.20)
     bindex (0.8.1)
     bootsnap (1.17.0)
       msgpack (~> 1.2)
@@ -127,8 +128,6 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.6.0)
-    nokogiri (1.15.5-arm64-darwin)
-      racc (~> 1.4)
     nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
     pg (1.5.4)
@@ -213,14 +212,10 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
-  arm64-darwin-22
-<<<<<<< HEAD
   x86_64-darwin-21
-=======
-  x86_64-darwin-22
->>>>>>> e7fe80f9a3bbb374952069d0e31107195db701c5
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   capybara
   debug
