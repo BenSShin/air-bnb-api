@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   get "/addresses" => "addresses#index"
   get "/rooms" => "rooms#index"
   get "/houses" => "houses#index"
+
+
+  post "/users" => "users#create"
 end
