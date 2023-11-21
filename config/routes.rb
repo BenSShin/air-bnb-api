@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-  # Rooms routes
   get "/rooms" => "rooms#index"
   post "/rooms" => "rooms#create"
   get "/rooms/:id" => "rooms#show"
   patch "/rooms/:id" => "rooms#update"
   delete "/rooms/:id" => "rooms#destroy"
+  
+  # reservation routes
+  get "/reservations" => "reservations#index"
+  get "/reservations/:id" => "reservations#show"
+  post "/reservations" => "reservations#create"
+  patch "/reservations/:id" => "reservations#update"
+  delete "/reservations/:id" => "reservations#destroy"
+  
+  # users and sessions routes
+  post "/users" => "users#create"
+  post "/sessions" => "sessions#create"
 end
