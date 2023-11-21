@@ -16,7 +16,7 @@ class ReservationsController < ApplicationController
       start_date: Date.parse(params[:start_date], "%Y/%m/%d"),
       end_date: Date.parse(params[:end_date], "%Y/%m/%d"),
       price: params[:price],
-      total: params[:total],
+      total: params[:total], # have to calculate total later
     )
 
     if @reservation.valid?
