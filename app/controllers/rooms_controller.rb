@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user, except: [:index, :show]
+
   def index
     @rooms = Room.all
     render :index
@@ -6,7 +8,7 @@ class RoomsController < ApplicationController
 
   def create
     @room = Room.create(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       address: params[:address],
       city: params[:city],
       state: params[:state],
@@ -18,7 +20,11 @@ class RoomsController < ApplicationController
       total_bedrooms: params[:total_bedrooms],
       total_bathrooms: params[:total_bathrooms],
     )
-    render :show
+    if @room.valid? #happy path
+      render :show
+    else #sad path
+      render json: { errors: @room.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def show
