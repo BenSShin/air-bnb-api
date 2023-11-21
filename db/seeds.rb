@@ -14,7 +14,7 @@
 #   { room_id: 2, url: "image4.url" },
 # ])
 
-# reservations seeds
+# # reservations seeds
 # reservation = Reservation.create!([
 #   {
 #     user_id: 1, room_id: 1, start_date: Date.new(2024, 1, 20), end_date: Date.new(2024, 1, 28), price: 200, total: 1600 },
@@ -22,9 +22,15 @@
 #   user_id: 1, room_id: 1, start_date: Date.new(2024, 2, 20), end_date: Date.new(2024, 2, 28), price: 200, total: 1600}
 # ])
 
-# # creates initial users
+#creates initial users
 # User.create!([
 #   { name: "Ben Shin", email: "ben@gmail.com", password: "password", password_confirmation: "password", image: "https://media.istockphoto.com/id/1425205941/photo/customer-service-sign-with-message-chat-on-dark-background-3d-render.webp?b=1&s=170667a&w=0&k=20&c=Scsdo1Ur7NZp8Vcg3anOET_Q6imb2fER4G4uiEhev64=" },
 #   { name: "Steven Ungaro", email: "steven@gmail.com", password: "password", password_confirmation: "password", image: "https://media.istockphoto.com/id/1425205941/photo/customer-service-sign-with-message-chat-on-dark-background-3d-render.webp?b=1&s=170667a&w=0&k=20&c=Scsdo1Ur7NZp8Vcg3anOET_Q6imb2fER4G4uiEhev64=" },
 #   { name: "Morgan Winkler", email: "morgan@gmail.com", password: "password", password_confirmation: "password", image: "https://media.istockphoto.com/id/1425205941/photo/customer-service-sign-with-message-chat-on-dark-background-3d-render.webp?b=1&s=170667a&w=0&k=20&c=Scsdo1Ur7NZp8Vcg3anOET_Q6imb2fER4G4uiEhev64=" },
+# ])
+
+# #review seeds
+# Review.create!([
+#   { reservation_id: 1, rating: 10, comment: "Great place to stay"},
+#   { reservation_id: 2, rating: 8, comment: "Loved the view"},
 # ])
