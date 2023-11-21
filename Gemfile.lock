@@ -129,9 +129,7 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.6.1)
-    nio4r (2.6.0)
     nokogiri (1.15.5-arm64-darwin)
-    nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
     pg (1.5.4)
     psych (5.1.1.1)
@@ -215,10 +213,7 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
-  x86_64-darwin-22
   arm64-darwin-22
-  x86_64-darwin-21
-  x86_64-darwin-22
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
