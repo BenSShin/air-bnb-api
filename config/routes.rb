@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   get "/houses" => "houses#index"
 
   # reservation routes
-  get "reservations" => "reservations#index"
-  get "reservations" => "reservations#show"
-  post "reservations" => "reservations#create"
-  patch "reservations" => "reservations#update"
-  delete "reservations" => "reservations#destroy"
+  get "/reservations" => "reservations#index"
+  get "/reservations/:id" => "reservations#show"
+  post "/reservations" => "reservations#create"
+  patch "/reservations/:id" => "reservations#update"
+  delete "/reservations/:id" => "reservations#destroy"
 end
