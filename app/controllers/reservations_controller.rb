@@ -49,4 +49,10 @@ class ReservationsController < ApplicationController
       render json: { errors: @reservation.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @reservation = Reservation.find_by(id: params[:id])
+    @reservation.destroy
+    render json: { message: "Reservation has been destroyed!" }
+  end
 end
