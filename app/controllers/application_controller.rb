@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery with: :exception, unless: -> { request.format.json? }
+  protect_from_forgery with: :exception, unless: -> { request.format.json? }
 
-      def current_user
+  def current_user
     auth_headers = request.headers["Authorization"]
     if auth_headers.present? && auth_headers[/(?<=\A(Bearer ))\S+\z/]
       token = auth_headers[/(?<=\A(Bearer ))\S+\z/]
@@ -24,6 +24,4 @@ class ApplicationController < ActionController::Base
       render json: {}, status: :unauthorized
     end
   end
-    
->>>>>>> 39f2700afbe03a381ab631f4526777fd639becdf
 end
