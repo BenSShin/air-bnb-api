@@ -3,15 +3,15 @@
 one:
   user_id: 1
   room_id: 1
-  start_date: 2023-11-20
-  end_date: 2023-11-20
+  start_date: 2024-11-20
+  end_date: 2024-11-21
   price: 9.99
   total: 9.99
 
 two:
   user_id: 1
   room_id: 1
-  start_date: 2023-11-20
-  end_date: 2023-11-20
+  start_date: 2024-01-20
+  end_date: 2024-01-24
   price: 9.99
   total: 9.99
