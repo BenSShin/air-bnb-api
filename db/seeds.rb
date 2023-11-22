@@ -25,10 +25,35 @@ Room.create!([
 
 # Room Image Seeds
 Image.create!([
-  { room_id: 1, url: "image.url" },
-  { room_id: 1, url: "image2.url" },
-  { room_id: 2, url: "image3.url" },
-  { room_id: 2, url: "image4.url" },
+  { room_id: 1, url: "https://frinkiac.com/img/S12E18/1067483.jpg" },
+  { room_id: 1, url: "https://img.freepik.com/free-photo/blue-house-with-blue-roof-sky-background_1340-25953.jpg" },
+  { room_id: 2, url: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" },
+  { room_id: 2, url: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg" },
+  { room_id: 3, url: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg" },
+  { room_id: 3, url: "https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg" },
+  { room_id: 4, url: "https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg" },
+  { room_id: 4, url: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg" },
+  { room_id: 5, url: "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg" },
+  { room_id: 5, url: "https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg" },
+  { room_id: 6, url: "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg" },
+  { room_id: 6, url: "https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg" },
+  { room_id: 7, url: "https://images.pexels.com/photos/1438832/pexels-photo-1438832.jpeg" },
+  { room_id: 7, url: "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg" },
+  { room_id: 8, url: "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg" },
+  { room_id: 8, url: "https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg" },
+  { room_id: 9, url: "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg" },
+  { room_id: 9, url: "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg" },
+  { room_id: 10, url: "https://images.pexels.com/photos/731082/pexels-photo-731082.jpeg" },
+  { room_id: 10, url: "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg" },
+  { room_id: 11, url: "https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg" },
+  { room_id: 11, url: "https://images.pexels.com/photos/2079249/pexels-photo-2079249.jpeg" },
+  { room_id: 12, url: "https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg" },
+  { room_id: 12, url: "https://images.pexels.com/photos/210464/pexels-photo-210464.jpeg" },
+  { room_id: 13, url: "https://images.pexels.com/photos/2462015/pexels-photo-2462015.jpeg" },
+  { room_id: 13, url: "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg" },
+  { room_id: 14, url: "https://images.pexels.com/photos/2640604/pexels-photo-2640604.jpeg" },
+  { room_id: 14, url: "https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg" },
+
 ])
 
 # Reservation Seeds
