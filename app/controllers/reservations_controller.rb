@@ -1,4 +1,6 @@
 class ReservationsController < ApplicationController
+  before_action :authenticate_user, excempt: [:index, :show]
+
   def index
     @reservations = Reservation.all
     render :index
@@ -18,7 +20,7 @@ class ReservationsController < ApplicationController
     total_price = total_days * room.price
 
     @reservation = Reservation.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       room_id: params[:room_id],
       start_date: start_date,
       end_date: end_date,
@@ -44,7 +46,6 @@ class ReservationsController < ApplicationController
     end
 
     @reservation.update(
-      user_id: params[:user_id] || @reservation.user_id,
       room_id: params[:room_id] || @reservation.room_id,
       start_date: start || @reservation.start_date,
       end_date: end_date || @reservation.end_date,
