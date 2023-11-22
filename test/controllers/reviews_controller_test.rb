@@ -24,7 +24,7 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
     assert_response 401
   end
 
-  test "index" do
+  test "index" dogit
     get "/reviews.json"
     assert_response 200
 
