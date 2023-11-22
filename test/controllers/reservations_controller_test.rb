@@ -35,16 +35,17 @@ class ReservationsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  # test "update" do
-  #   reservation = Reservation.first
-  #   patch "/reservations/#{reservation.id}.json", headers: { "Authorization" => "Bearer #{@jwt}" }, params: { room_id: 1 }
-  #   assert_response 200
-  #   data = JSON.parse(response.body)
-  #   assert_equal 2, data["room_id"]
+  test "update" do
+    reservation = Reservation.first
+    patch "/reservations/#{reservation.id}.json", headers: { "Authorization" => "Bearer #{@jwt}" }, params: { room_id: 1 }
+    assert_response 200
+    data = JSON.parse(response.body)
+    assert_equal 2, data["room_id"]
+    assert_equal 1, data["user_id"]
 
-  #   patch "/reservations/#{reservation.id}.json"
-  #   assert_response 401
-  # end
+    patch "/reservations/#{reservation.id}.json"
+    assert_response 401
+  end
 
   test "destroy" do
     assert_difference "Reservation.count", -1 do
