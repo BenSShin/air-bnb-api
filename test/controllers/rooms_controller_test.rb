@@ -11,9 +11,19 @@ class RoomsControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Room.count", 1 do
+      # creates test instance of user
+      post "/users.json", params: { name: "Test", email: "test@test.com", password: "password", password_confirmation: "password" }
+      # logs in test instance of user
+      post "/sessions.json", params: { email: "test@test.com", password: "password" }
+      # recieve the JWT
+      data = JSON.parse(response.body)
+      jwt = data["jwt"]
+
       post "/rooms.json", params: {
-                            user_id: 1, address: "test", city: "test city", state: "TS", price: 199, description: "Test description", home_type: "House", room_type: "Test", total_occupancy: 1, total_bedrooms: 1, total_bathrooms: 1.0,
-                          }
+                            user_id: current_user.id, address: "test", city: "test city", state: "TS", price: 199, description: "Test description", home_type: "House", room_type: "Test", total_occupancy: 1, total_bedrooms: 1, total_bathrooms: 1.0,
+                          },
+                          headers: { "Authorization" => "Bearer #{jwt}" }
+
       assert_response 200
     end
   end
@@ -37,8 +47,10 @@ class RoomsControllerTest < ActionDispatch::IntegrationTest
 
   test "destroy" do
     assert_difference "Room.count", -1 do
-      delete "/rooms/#{Room.first.id}.json"
+      delete "/rooms/#{Room.first.id}.json", headers: { "Authorization" => "Bearer #{@jwt}" }
       assert_response 200
     end
+    delete "/rooms/#{Room.first.id}.json"
+    assert_response 401
   end
 end
